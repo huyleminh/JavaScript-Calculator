@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+* {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+body {
+    background-color: #ccc;
+    min-height: 100vh;
+    height: 100vh;
+}
+
+h1 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #242424;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.App {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:  center;
+}
+
+.calculator {
+    width: 350px;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+
+    background-color: #000;
+}
+
+.display__container {
+    width: 100%;
+    height: auto;
+    background-color: #242424;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.display__container > div {
+    height: auto;
+    width: 100%;
+    text-align: right;
+
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formula {
+    min-height: 42px;
+    color: #ff8a0b;
+    vertical-align: text-top;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.buttons__container {
+    position: relative;
+    width: 100%;
+    height: 340px;
+    display: grid;
+    grid-template-areas:
+        "clear clear divide multiply"
+        "seven eight nine substract"
+        "four five six add"
+        "one two three equals"
+        "zero zero decimal equals";
+}
+
+.buttons__container > button {
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+    color: #fff;
+    border: 0.5px solid #000;
+    background-color: #4d4d4d;
+    cursor: pointer;
+}
+
+.buttons__container > button:hover {
+    opacity: 0.9;
+    border: 0.5px solid rgb(228, 225, 225);
+}
+
+#clear {
+    grid-area: clear;
+    background-color: red;
+}
+#decimal {
+    grid-area: decimal;
+}
+#divide {
+    grid-area: divide;
+    background-color: #686464;
+}
+#add {
+    grid-area: add;
+    background-color: #686464;
+}
+#subtract {
+    grid-area: substract;
+    background-color: #686464;
+}
+#multiply {
+    grid-area: multiply;
+    background-color: #686464;
+}
+#one {
+    grid-area: one;
+}
+#two {
+    grid-area: two;
+}
+#three {
+    grid-area: three;
+}
+#four {
+    grid-area: four;
+}
+#five {
+    grid-area: five;
+}
+#six {
+    grid-area: six;
+}
+#seven {
+    grid-area: seven;
+}
+#eight {
+    grid-area: eight;
+}
+#nine {
+    grid-area: nine;
+}
+#zero {
+    grid-area: zero;
+}
+#equals {
+    grid-area: equals;
+    background-color: #46a049;
+}
