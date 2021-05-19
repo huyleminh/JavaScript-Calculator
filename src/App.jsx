@@ -87,14 +87,15 @@ function App() {
 	const handleCalculateResult = () => {
 		let expression = formula;
 		expression = expression
-					.replace(/(\+\+)|(\-\-)/g, "+")
-					.replace(/(\+\-)|(\-\+)/g, "-")
+					.replace(/(\++)|(--)/g, "+")
+					.replace(/(\+-)|(-\+)/g, "-")
 					.replace(/(\*\+)|(\/\+)/g, "+")
 					.replace(/^\./, "0.")
 
 		if (/[x+‑/]$/.test(expression))
 			expression = expression.slice(0, -1);
 
+		// eslint-disable-next-line
 		const resultVal = eval(expression);
 		setResult(resultVal);
 		setPrevValue(resultVal);
